@@ -1,4 +1,5 @@
 Feature: Login scenario
 
 Scenario: Login scenario
-    Given TEST
+    Given User opens login page
+    Then User fills login and password
