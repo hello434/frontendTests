@@ -25,3 +25,15 @@ This project demonstrates frontend testing using Cypress, Gherkin, and TypeScrip
 ## Test Examples
 
 will be added..
+
+### Technology Stack
+
+Describe the technologies and libraries used in the project.
+
+```markdown
+## Technology Stack
+
+- **Cypress** - Frontend testing tool
+- **TypeScript** - Programming language used for development
+- **Gherkin** - BDD language for writing test scenarios
+- **Cucumber Preprocessor** - For integrating Gherkin with Cypress
