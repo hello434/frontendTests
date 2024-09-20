@@ -20,7 +20,7 @@ module.exports = defineConfig({
 
       return config;
     },
-    specPattern: "cypress/**/*.{feature,features}", 
+    specPattern: "cypress/**/*.{feature,features}",
     supportFile: false,
   },
 });
