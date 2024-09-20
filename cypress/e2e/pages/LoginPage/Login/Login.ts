@@ -1,5 +1,6 @@
 import { Given } from "@badeball/cypress-cucumber-preprocessor";
+import router from "../../../../routes/common";
 
-Given("I open wiki home page", () => {
-    cy.visit("https://www.wikipedia.org/");
+Given("I open the login page", () => {
+    cy.visit(router.loginpage);
   });
