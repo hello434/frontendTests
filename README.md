@@ -26,10 +26,7 @@ This project demonstrates frontend testing using Cypress, Gherkin, and TypeScrip
 
 will be added..
 
-### Technology Stack
-
-```markdown
-## Techstack
+## Technology Stack
 
 - **Cypress** - Frontend testing tool
 - **TypeScript** - Programming language used for development
