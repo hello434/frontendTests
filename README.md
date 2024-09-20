@@ -28,10 +28,8 @@ will be added..
 
 ### Technology Stack
 
-Describe the technologies and libraries used in the project.
-
 ```markdown
-## Technology Stack
+## Techstack
 
 - **Cypress** - Frontend testing tool
 - **TypeScript** - Programming language used for development
