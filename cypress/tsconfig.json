@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+      "target":  "es5",
+      "lib": ["es5", "dom"],
+      "types": ["cypress", "node"],
+      "baseUrl": "./",
+      "paths" : {
+        "@/*": ["cypress/*"]
+      },
+      "strict": true,
+      "allowJs": true,
+      "strictBindCallApply": true,
+      "noImplicitReturns": true,
+      "noImplicitAny": false
+    },
+    "include": [
+      "../node_modules/cypress",
+      "**/*.ts"
+    ]
+  }
