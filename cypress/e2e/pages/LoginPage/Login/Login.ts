@@ -15,7 +15,7 @@ const randomEmail = faker.internet.email();
 const randomPassword = faker.internet.password();
 
 Given('User opens login page', () => {
-  cy.visit(router.loginpage);
+  cy.visit(router.loginPage);
 });
 
 Then('User fills valid login', () => {
