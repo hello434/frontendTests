@@ -1,4 +1,4 @@
-import { Given, Then } from '@badeball/cypress-cucumber-preprocessor';
+import { Given, Then, When } from '@badeball/cypress-cucumber-preprocessor';
 import router from '../../../../routes/common';
 import coreUIActions from '../../../core/uiActions';
 import LoginPage from '../Login/LoginPageObjectModel';
@@ -21,10 +21,15 @@ Then('User fills login and password', () => {
   });
 });
 
-Then('User clicks on login button', () => {
+When('User clicks on login button', () => {
     coreUIActionsInstance.elementClick({el: loginPageInstance.loginPageLoginButton})
 });
 
 Then('User successfully logs in' , () => {
     assertionsInstance.checkIfElementExists({el: productsListInstance.listShoppingCart})
+})
+
+Then('The user cannot log in and is on the loginpage', () => {
+    assertionsInstance.checkIfElementExists({el: loginPageInstance.loginPageError})
+    assertionsInstance.checkIfElementExists({el: productsListInstance.listShoppingCart, shouldExist: false})
 })

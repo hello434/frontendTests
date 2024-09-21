@@ -12,4 +12,8 @@ export default class LoginPage {
     get loginPageLoginButton() {
         return new coreUI().getTestElementByID({el: 'login-button'})
     }
+
+    get loginPageError() {
+        return new coreUI().getTestElementByDataTest({el: 'error'})
+    }
 }

@@ -6,5 +6,9 @@ Given User opens login page
 
 Scenario: Successful login with valid credentials
     Then User fills login and password
-    Then User clicks on login button
+    When User clicks on login button
     Then User successfully logs in
+
+Scenario: Unsuccessful login without filled credentials
+    Then User clicks on login button
+    Then The user cannot log in and is on the loginpage
