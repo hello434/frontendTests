@@ -24,7 +24,29 @@ This project demonstrates frontend testing using Cypress, Gherkin, and TypeScrip
     ```
 ## Test Examples
 
-will be added..
+### Login Scenarios
+
+1. **Successful login with valid credentials**
+   - **Feature:** Login page
+   - **Purpose:** Test successful login with valid credentials
+   - **Background:**
+     - Given User opens login page
+   - **Steps:**
+     - Then User fills valid login
+     - Then User fills valid password
+     - When User clicks on login button
+     - Then User successfully logs in
+
+2. **Unsuccessful login with invalid password and invalid email**
+   - **Feature:** Login page
+   - **Purpose:** Test unsuccessful login with both invalid credentials
+   - **Background:**
+     - Given User opens login page
+   - **Steps:**
+     - Then User fills invalid login
+     - Then User fills invalid password
+     - Then User clicks on login button
+     - Then The user cannot log in and is on the login page
 
 ## Technology Stack
 
