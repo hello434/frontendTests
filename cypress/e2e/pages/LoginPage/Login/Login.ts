@@ -4,11 +4,15 @@ import coreUIActions from '../../../core/uiActions';
 import LoginPage from '../Login/LoginPageObjectModel';
 import Assertions from '../../../core/assertions';
 import ProductsList from '../../Products/List/ListPageObjectModel';
+import { faker } from '@faker-js/faker';
 
 const coreUIActionsInstance = new coreUIActions();
 const loginPageInstance = new LoginPage();
 const assertionsInstance = new Assertions();
 const productsListInstance = new ProductsList();
+
+const randomEmail = faker.internet.email();
+const randomPassword = faker.internet.password();
 
 Given('User opens login page', () => {
   cy.visit(router.loginpage);
@@ -18,6 +22,14 @@ Then('User fills valid login', () => {
   cy.fixture('standard_user').then((user) => {
     coreUIActionsInstance.inputType({ el: loginPageInstance.loginPageLoginInput, value: user.username });
   });
+});
+
+Then('User fills invalid login', () => {
+    coreUIActionsInstance.inputType({ el: loginPageInstance.loginPageLoginInput, value: randomEmail});
+});
+
+Then('User fills invalid password', () => {
+  coreUIActionsInstance.inputType({ el: loginPageInstance.loginPagePasswordInput, value: randomPassword});
 });
 
 Then('User fills valid password', () => {
