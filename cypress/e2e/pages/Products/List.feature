@@ -1,4 +1,5 @@
-Feature: blablabla
+Feature: Product List
+The purpose of this feature is to test the ability to add, edit, and remove products from the cart.
 
 Background: 
 Given User is on product list page
