@@ -14,9 +14,14 @@ Given('User opens login page', () => {
   cy.visit(router.loginpage);
 });
 
-Then('User fills login and password', () => {
+Then('User fills valid login', () => {
   cy.fixture('standard_user').then((user) => {
     coreUIActionsInstance.inputType({ el: loginPageInstance.loginPageLoginInput, value: user.username });
+  });
+});
+
+Then('User fills valid password', () => {
+  cy.fixture('standard_user').then((user) => {
     coreUIActionsInstance.inputType({ el: loginPageInstance.loginPagePasswordInput, value: user.password });
   });
 });
