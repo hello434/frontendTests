@@ -9,7 +9,7 @@ const prodConfig = require('./cypress/configs/prod.json');
 
 module.exports = defineConfig({
   e2e: {
-    baseUrl: prodConfig.baseUrl ,  
+    baseUrl: prodConfig.baseUrl,
     async setupNodeEvents(on, config) {
       const bundler = createBundler({
         plugins: [createEsbuildPlugin(config)],
