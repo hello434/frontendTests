@@ -8,4 +8,12 @@ export default class ProductsList {
     getProductTitle({id} : {id: number}){
         return new coreUI().getElementByID({el: `item_${id}_title_link`})
     }
+    
+    get inventoryAddToCart() {
+        return new coreUI().getElementByClass({el: 'btn_primary btn_inventory'})
+    }
+   
+    get cartRemoveFromCart() {
+        return new coreUI().getElementByClass({el: 'btn_secondary cart_button'})
+    }
 }

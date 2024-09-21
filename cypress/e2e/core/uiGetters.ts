@@ -6,4 +6,8 @@ export default class coreUI {
     getElementByDataTest({el} : {el: string}) : Cypress.Chainable<JQuery<HTMLElement>> {
         return cy.get(`[data-test="${el}"]`)
     }
+
+    getElementByClass({el} : {el: string}) : Cypress.Chainable<JQuery<HTMLElement>> {
+        return cy.get(`[class="${el}"]`)
+    }
 }
