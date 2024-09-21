@@ -54,3 +54,5 @@ This project demonstrates frontend testing using Cypress, Gherkin, and TypeScrip
 - **TypeScript** - Programming language used for development
 - **Gherkin** - BDD language for writing test scenarios
 - **Cucumber Preprocessor** - For integrating Gherkin with Cypress
+- **ESLint** - Tool for identifying and fixing problems in JavaScript/TypeScript code
+- **Faker.js** - Library for generating fake data in tests
