@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.2.0] - 2024-09-22
+### Added
+- Product checkout tests
+
 ## [1.1.0] - 2024-09-21
 ### Added
 - User authorization tests
