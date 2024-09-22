@@ -37,16 +37,24 @@ This project demonstrates frontend testing using Cypress, Gherkin, and TypeScrip
      - When User clicks on login button
      - Then User successfully logs in
 
-2. **Unsuccessful login with invalid password and invalid email**
-   - **Feature:** Login page
-   - **Purpose:** Test unsuccessful login with both invalid credentials
+2. **Successfully add product to a cart and succesfully order it**
+   - **Feature:** Product List
+   - **Purpose:** We are testing this scenario to ensure that users can successfully add a product to the cart, complete the checkout process, and place an order without any issues.
    - **Background:**
-     - Given User opens login page
+     - Given User is on product list page
    - **Steps:**
-     - Then User fills invalid login
-     - Then User fills invalid password
-     - Then User clicks on login button
-     - Then The user cannot log in and is on the login page
+     - When User clicks on random item
+     - When User clicks to add to cart button from product description page
+     - Then User clicks to shopping cart button
+     - Then Product was successfully added to shopping cart
+     - When The user clicks on the Checkout button
+     - Then User fills first name
+     - Then User fills last name
+     - Then User fills postal code
+     - When The user clicks on the Continue button
+     - Then The user checks the order and makes sure that the product is the same
+     - When The user clicks on the Finish button
+     - Then The order was successfully completed
 
 ## Technology Stack
 
