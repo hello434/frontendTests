@@ -75,3 +75,11 @@ Then('User can not continue to checkout and error message appears', () => {
 Then('The user clicks on the Cancel button', () => {
     coreUIActionsInstance.elementClick({el: productsListInstance.cartCancel})
 })
+
+When('The user clicks on the Finish button', () => {
+    coreUIActionsInstance.elementClick({el: productsListInstance.checkoutFinish})
+})
+
+Then('The order was successfully completed', () => {
+    assertionsInstance.checkIfElementExists({el: productsListInstance.checkoutComplete})
+})

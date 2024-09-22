@@ -44,4 +44,12 @@ export default class ProductsList {
     get cartError() {
         return new coreUI().getElementByDataTest({el: 'error'})
     }
+
+    get checkoutFinish() {
+        return new coreUI().getElementByClass({el: 'btn_action cart_button'})
+    }
+
+    get checkoutComplete() {
+        return new coreUI().getElementByClass({el: 'complete-text'})
+    }
 }
