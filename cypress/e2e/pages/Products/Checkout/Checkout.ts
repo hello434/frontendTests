@@ -1,4 +1,4 @@
-import ProductsList from "../List/ListPageObjectModel";
+import ProductsList from "../Checkout/ProductstPageObjectModel";
 import { Given, When, Then } from '@badeball/cypress-cucumber-preprocessor';
 import coreUIActions from '../../../core/uiActions';
 import router from "../../../../routes/common";
@@ -10,7 +10,8 @@ const productsListInstance = new ProductsList();
 const loginPageInstance = new LoginPage();
 const coreUIActionsInstance = new coreUIActions();
 const assertionsInstance = new Assertions();
-const randomId = Math.floor(Math.random() * 6);
+const firstRandomID = Math.floor(Math.random() * 6);
+const secondRandomID = Math.floor(Math.random() * 6);
 const firstName = faker.person.firstName();
 const lastName = faker.person.lastName();
 const postalCode = faker.location.zipCode();
@@ -25,7 +26,7 @@ Given('User is on product list page', () => {
 })
 
 When('User clicks on random item' , () => {
-    coreUIActionsInstance.elementClick({el: productsListInstance.getProductTitle({id: randomId})})
+    coreUIActionsInstance.elementClick({el: productsListInstance.getProductTitle({id: firstRandomID})})
 })
 
 When('User clicks to add to cart button from product description page' , () => {
@@ -37,7 +38,7 @@ Then('User clicks to shopping cart button', () => {
 }) 
 
 Then('Product was successfully added to shopping cart', () => {
-    assertionsInstance.checkIfElementExists({el: productsListInstance.getProductTitle({id: randomId})})
+    assertionsInstance.checkIfElementExists({el: productsListInstance.getProductTitle({id: firstRandomID})})
 })
 
 Then('Product was removed from shopping cart', () => {
@@ -45,7 +46,7 @@ Then('Product was removed from shopping cart', () => {
 })
 
 Then('Product was successfully deleted from shopping cart', () => {
-    assertionsInstance.checkIfElementExists({el: productsListInstance.getProductTitle({id: randomId}), shouldExist: false})
+    assertionsInstance.checkIfElementExists({el: productsListInstance.getProductTitle({id: firstRandomID}), shouldExist: false})
 })
 
 When('The user clicks on the Checkout button', () => {
@@ -77,7 +78,7 @@ Then('The user clicks on the Cancel button', () => {
 })
 
 Then('The user checks the order and makes sure that the product is the same', () => {
-    assertionsInstance.checkIfElementExists({el: productsListInstance.getProductTitle({id: randomId})})
+    assertionsInstance.checkIfElementExists({el: productsListInstance.getProductTitle({id: firstRandomID})})
 })
 
 When('The user clicks on the Finish button', () => {
@@ -86,4 +87,12 @@ When('The user clicks on the Finish button', () => {
 
 Then('The order was successfully completed', () => {
     assertionsInstance.checkIfElementExists({el: productsListInstance.checkoutComplete})
+})
+
+Then('The user clicks on second random item', () => {
+    coreUIActionsInstance.elementClick({el: productsListInstance.getProductTitle({id: secondRandomID})})
+})
+
+Then('The user checks the order and makes sure that the second product is the same', () => {
+    assertionsInstance.checkIfElementExists({el: productsListInstance.getProductTitle({id: secondRandomID})})
 })

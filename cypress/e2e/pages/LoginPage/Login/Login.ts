@@ -3,7 +3,7 @@ import router from '../../../../routes/common';
 import coreUIActions from '../../../core/uiActions';
 import LoginPage from '../Login/LoginPageObjectModel';
 import Assertions from '../../../core/assertions';
-import ProductsList from '../../Products/List/ListPageObjectModel';
+import ProductsList from '../../Products/Checkout/ProductstPageObjectModel';
 import { faker } from '@faker-js/faker';
 
 const coreUIActionsInstance = new coreUIActions();
