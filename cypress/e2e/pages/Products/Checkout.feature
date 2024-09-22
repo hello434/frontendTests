@@ -36,23 +36,24 @@ Then The user checks the order and makes sure that the product is the same
 When The user clicks on the Finish button
 Then The order was successfully completed
 
-#Will be fixed
-# Scenario: Successfully add two products to a cart and succesfully order it
-# When User clicks on random item
-# When User clicks to add to cart button from product description page
-# Then The user clicks on second random item
-# When User clicks to add to cart button from product description page
-# Then User clicks to shopping cart button
-# Then Product was successfully added to shopping cart
-# When The user clicks on the Checkout button
-# Then User fills first name
-# Then User fills last name
-# Then User fills postal code
-# When The user clicks on the Continue button
-# Then The user checks the order and makes sure that the product is the same
-# Then The user checks the order and makes sure that the second product is the same
-# When The user clicks on the Finish button
-# Then The order was successfully completed
+Scenario: Successfully add two products to a cart and succesfully order it
+When User clicks on random item
+When User clicks to add to cart button from product description page
+Given User clicks on the burger button
+When User clicks on all items option
+Then The user clicks on second random item
+When User clicks to add to cart button from product description page
+Then User clicks to shopping cart button
+Then Product was successfully added to shopping cart
+When The user clicks on the Checkout button
+Then User fills first name
+Then User fills last name
+Then User fills postal code
+When The user clicks on the Continue button
+Then The user checks the order and makes sure that the product is the same
+Then The user checks the order and makes sure that the second product is the same
+When The user clicks on the Finish button
+Then The order was successfully completed
 
 Scenario: Successfully add product to a cart and then cancel the order from the finish page and add one more different product
 When User clicks on random item

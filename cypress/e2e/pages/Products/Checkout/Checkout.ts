@@ -5,6 +5,7 @@ import router from "../../../../routes/common";
 import Assertions from '../../../core/assertions';
 import LoginPage from "../../LoginPage/Login/LoginPageObjectModel";
 import { faker } from '@faker-js/faker';
+import SidebarMenu from "../../Sidebar/Sidebar/SidebarPageObjectModel";
 
 const productsListInstance = new ProductsList();
 const loginPageInstance = new LoginPage();
@@ -15,6 +16,7 @@ const secondRandomID = Math.floor(Math.random() * 6);
 const firstName = faker.person.firstName();
 const lastName = faker.person.lastName();
 const postalCode = faker.location.zipCode();
+const sidebarMenuInstance = new SidebarMenu();
 
 Given('User is on product list page', () => {
     cy.visit(router.loginPage);
@@ -95,4 +97,12 @@ Then('The user clicks on second random item', () => {
 
 Then('The user checks the order and makes sure that the second product is the same', () => {
     assertionsInstance.checkIfElementExists({el: productsListInstance.getProductTitle({id: secondRandomID})})
+})
+
+Given('User clicks on the burger button', () => {
+    coreUIActionsInstance.elementClick({el: sidebarMenuInstance.burgerButton})
+})
+
+When('User clicks on all items option' , () => {
+    coreUIActionsInstance.elementClick({el: sidebarMenuInstance.burgerAllItems})
 })
