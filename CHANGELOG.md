@@ -1,5 +1,9 @@
 # Changelog
 
+## [2.1.0] - 2024-09-23
+### Added
+- Github actions workflow_dispatch
+
 ## [2.0.0] - 2024-09-22
 ### Added
 - Github actions
