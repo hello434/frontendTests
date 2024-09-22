@@ -3,7 +3,7 @@ import router from '../../../../routes/common';
 import coreUIActions from '../../../core/uiActions';
 import LoginPage from '../Login/LoginPageObjectModel';
 import Assertions from '../../../core/assertions';
-import ProductsList from '../../Products/List/ListPageObjectModel';
+import ProductsList from '../../Products/Checkout/ProductstPageObjectModel';
 import { faker } from '@faker-js/faker';
 
 const coreUIActionsInstance = new coreUIActions();
@@ -15,7 +15,7 @@ const randomEmail = faker.internet.email();
 const randomPassword = faker.internet.password();
 
 Given('User opens login page', () => {
-  cy.visit(router.loginpage);
+  cy.visit(router.loginPage);
 });
 
 Then('User fills valid login', () => {

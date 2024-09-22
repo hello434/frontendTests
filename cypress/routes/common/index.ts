@@ -1,5 +1,6 @@
 const router = {
-    loginpage: '/v1/index.html',
+    loginPage: '/v1/index.html',
+    productList: '/v1/inventory.html'
   };
   
   export default router;
