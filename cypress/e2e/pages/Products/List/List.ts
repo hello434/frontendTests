@@ -76,6 +76,10 @@ Then('The user clicks on the Cancel button', () => {
     coreUIActionsInstance.elementClick({el: productsListInstance.cartCancel})
 })
 
+Then('The user checks the order and makes sure that the product is the same', () => {
+    assertionsInstance.checkIfElementExists({el: productsListInstance.getProductTitle({id: randomId})})
+})
+
 When('The user clicks on the Finish button', () => {
     coreUIActionsInstance.elementClick({el: productsListInstance.checkoutFinish})
 })
