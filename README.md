@@ -22,6 +22,22 @@ This project demonstrates frontend testing using Cypress, Gherkin, and TypeScrip
     ```bash
     npx cypress run
     ```
+
+## Continuous Integration
+
+This project uses GitHub Actions to automatically run tests every time changes are pushed to the main branch or when a pull request is opened. You can also manually trigger the tests via the GitHub Actions interface.
+
+To manually run the tests:
+1. Go to the Actions tab in the repository.
+2. Select the Run Cypress Tests workflow.
+3. Click on the Run workflow button.
+
+The pipeline automatically:
+- Installs dependencies
+- Runs all Cypress tests
+
+This ensures that the test suite passes before any changes are merged into the main branch.
+
 ## Test Examples
 
 ### Login Scenarios
