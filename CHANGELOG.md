@@ -1,5 +1,9 @@
 # Changelog
 
+## [2.0.0] - 2024-09-22
+### Added
+- Github actions
+
 ## [1.3.1] - 2024-09-22
 ### Fixed
 - Fix checkout scenario with 2 products to order
