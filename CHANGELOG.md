@@ -1,5 +1,9 @@
 # Changelog
 
+## [3.0.0] - 2024-09-30
+### Added
+- Update cypress 13.15.0
+
 ## [2.1.0] - 2024-09-23
 ### Added
 - Github actions workflow_dispatch
